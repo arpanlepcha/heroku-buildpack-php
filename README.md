@@ -69,8 +69,6 @@ can be downloaded by the build pack (see the URIs in `compile`).
     make install -s
     popd
 
-
-
    # Take care of vendoring Apache.
     httpd_version=2.2.25
     httpd_dirname=httpd-$httpd_version
