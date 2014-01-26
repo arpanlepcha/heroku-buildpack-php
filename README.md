@@ -58,7 +58,20 @@ can be downloaded by the build pack (see the URIs in `compile`).
     make install -s
     popd
 
-    # Take care of vendoring Apache.
+    freetype=freetype-2.5.2.tar.bz2
+    freetype_dir_name=freetype-2.5.2
+    curl -Lo $freetype http://garr.dl.sourceforge.net/project/freetype/freetype2/2.5.2/freetype-2.5.2.tar.bz2
+    rm -rf $freetype_dir_name
+    tar jxf $freetype
+    pushd $freetype_dir_name
+    ./configure
+    make -s
+    make install -s
+    popd
+
+
+
+   # Take care of vendoring Apache.
     httpd_version=2.2.25
     httpd_dirname=httpd-$httpd_version
     httpd_archive_name=$httpd_dirname.tar.bz2
